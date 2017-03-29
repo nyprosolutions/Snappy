@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Snappy</string>
+
+    <string-array name="time_format_array">
+        <item>24-Hour</item>
+        <item>12-Hour</item>
+    </string-array>
+
+    <string-array name="date_format_array">
+        <item>DD/MM/YY</item>
+        <item>MM/DD/YY</item>
+        <item>YY/MM/DD</item>
+        <item>YY/DD/MM</item>
+    </string-array>
+
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Español</item>
+        <item>Français</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.appcypher.bad.snappy.SnappyActivity"
+    android:background="@color/colorLightPurple2">
+
+    <RelativeLayout
+        android:id="@+id/time_format_spinner_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/drop_shadow_background">
+
+        <TextView
+            android:id="@+id/time_format_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Time Format"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/time_format_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_format_text"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/transparency_seekbar_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/drop_shadow_background"
+        android:layout_below="@+id/time_format_spinner_box">
+
+        <TextView
+            android:id="@+id/transparency_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Change Widget's Transparency"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <SeekBar
+            android:id="@+id/transparency_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transparency_text"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/date_format_spinner_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/drop_shadow_background"
+        android:layout_below="@+id/transparency_seekbar_box">
+
+        <TextView
+            android:id="@+id/date_format_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Date Format"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/date_format_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_format_text"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/language_spinner_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/drop_shadow_background"
+            android:layout_below="@+id/date_format_spinner_box">
+
+        <TextView
+            android:id="@+id/language_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Language"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/language_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/language_text"
+            android:layout_margin="10dp"
+            android:spinnerMode="dialog"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_list_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/drop_shadow_background"
+        android:layout_below="@+id/language_spinner_box">
+
+        <TextView
+            android:id="@+id/image_list_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose Widget Style"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_list_text"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_dark_background">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/digital_clock_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/regular_clock_box"
+                    android:layout_marginRight="50dp">
+
+                    <ImageView
+                        android:id="@+id/digital_mock"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/digital_clock_mock"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Digital Clock"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_below="@+id/digital_mock"
+                        android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/regular_clock_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="50dp">
+
+                    <ImageView
+                        android:id="@+id/regular_mock"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/regular_clock_mock"
+                        android:onClick="mockClicked"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Regular Clock"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_below="@+id/regular_mock"
+                        android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/classic_clock_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/digital_clock_box"
+                    android:layout_marginRight="50dp">
+
+                    <ImageView
+                        android:id="@+id/classic_mock"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/classic_clock_mock"
+                        android:onClick="mockClicked"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Classic Clock"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_below="@+id/classic_mock"
+                        android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/goofy_clock_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/classic_clock_box"
+                    android:layout_marginRight="50dp">
+
+                    <ImageView
+                        android:id="@+id/goofy_mock"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/goofy_clock_mock"
+                        android:onClick="mockClicked"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Goofy Clock"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_below="@+id/goofy_mock"
+                        android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_below="@+id/image_list_box"/>
+
+</RelativeLayout>
